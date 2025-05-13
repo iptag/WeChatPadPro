@@ -1,5 +1,114 @@
 # WeChatPadPro
 
+<div align="center">
+    <h3>🚀 基于 WeChat Pad 协议的高级微信管理工具 🚀</h3>
+    <p align="center">
+        <img src="https://img.shields.io/badge/Version-v8059-blue?style=for-the-badge" alt="Version">
+        <img src="https://img.shields.io/badge/iOS-18.3.2-brightgreen?style=for-the-badge" alt="iOS">
+        <a href="https://t.me/+LK0JuqLxjmk0ZjRh">
+            <img src="https://img.shields.io/badge/Telegram-交流群-blue?style=for-the-badge&logo=telegram" alt="Telegram Group">
+        </a>
+        <a href="https://pd.qq.com/s/9hk7qzj9p">
+            <img src="https://img.shields.io/badge/QQ-频道-EB1923?style=for-the-badge&logo=tencentqq&logoColor=white" alt="QQ Channel">
+        </a>
+    </p>
+    <p align="center">
+        <b>⭐️ 欢迎加入官方交流群 ⭐️</b><br>
+        <span style="font-size: 1.2em;">
+            👉 <a href="https://t.me/+LK0JuqLxjmk0ZjRh">Telegram 群组</a> | 
+            <a href="https://pd.qq.com/s/9hk7qzj9p">QQ 频道</a> 👈
+        </span><br>
+        获取最新版本更新、技术支持和使用教程
+    </p>
+</div>
+
+<div align="center">
+
+[📢 加入交流群](#-加入官方交流群) •
+[🎉 最新更新](#-最新更新-v8059) •
+[📝 功能特性](#-功能特性) •
+[⚠️ 使用须知](#-重要提醒) •
+[📦 安装教程](#-安装指南)
+
+</div>
+
+---
+
+## 📢 加入官方交流群
+
+<table>
+<tr>
+<td width="33%">
+
+### 💬 Telegram 交流群
+- 🔗 群组链接：[点击加入](https://t.me/+LK0JuqLxjmk0ZjRh)
+- 👥 当前成员：203+ 位用户
+- 💡 交流内容：
+  - 最新版本发布通知
+  - 技术问题解答
+  - 使用经验分享
+  - Bug 反馈与建议
+
+</td>
+<td width="33%">
+
+### 🎮 QQ 频道
+- 🔗 频道名称：粹一的频道
+- 🔍 频道链接：[点击加入](https://pd.qq.com/s/9hk7qzj9p)
+- 📱 加入方式：
+  - 方式一：[点击链接直接加入](https://pd.qq.com/s/9hk7qzj9p)
+  - 方式二：扫描下方二维码
+
+<div align="center">
+<img src="qrcode_1747080638386.jpg" width="150" alt="QQ频道二维码">
+</div>
+
+</td>
+<td width="33%">
+
+### 👥 微信交流群
+- 📱 加入方式：扫描下方二维码
+- 💡 交流内容：
+  - 技术讨论
+  - 问题解答
+  - 使用经验分享
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/30353400-29f8-4544-84ad-18e7deaaed73" width="150" alt="微信群二维码">
+</div>
+
+</td>
+</tr>
+</table>
+
+## 💰 赞助支持
+
+如果您觉得这个项目对您有帮助，欢迎赞助支持我们继续开发维护！
+
+<table>
+<tr>
+<td width="50%">
+
+### 微信赞赏码
+<div align="center">
+<img src="https://raw.githubusercontent.com/luolin-ai/CozeBot-WxworkPro/main/tu/106f2de5438c9c7cfd35e00a989b0cd.jpg" width="200" alt="微信赞赏码">
+</div>
+
+</td>
+<td width="50%">
+
+### 赞助说明
+- 💝 赞助金额不限，感谢每一份支持
+- 🎁 赞助者可获得：
+  - 优先技术支持
+  - 新功能优先体验
+  - 定制化需求支持
+- 📧 赞助后请联系我们获取权益
+
+</td>
+</tr>
+</table>
+
 WeChatPadPro 是基于 WeChat Pad 协议的高级微信管理工具，支持以下功能：
 
 - 朋友圈收发与互动（点赞、评论）
@@ -21,35 +130,6 @@ WeChatPadPro 是基于 WeChat Pad 协议的高级微信管理工具，支持以�
 
 WeChatPadPro 适用于个人微信增强、运营管理和自动化交互，提升微信使用效率和管理能力。
 
-## 赞助
-
-感谢您访问这个开源项目！如果您觉得这个项目对您有帮助，您可以选择通过以下方式进行捐赠，以支持我们继续开发和维护。
-
-如果您愿意通过微信支付支持这个项目，您可以扫描下面的二维码进行捐赠：
-## 📢 社群交流
-## 扫描二维码加入微信群
-
-如果你想加入我们的微信群，可以扫描以下二维码：
-
-<div style="display: flex; justify-content: space-around;">
-  <img src="https://github.com/user-attachments/assets/30353400-29f8-4544-84ad-18e7deaaed73" width="300px" />
-  <img src="https://raw.githubusercontent.com/luolin-ai/CozeBot-WxworkPro/main/tu/106f2de5438c9c7cfd35e00a989b0cd.jpg" width="300px" />
-</div>
-
-
-
-欢迎加入 Telegram 群组参与交流讨论：
-
-👉 [点击加入](https://t.me/+LK0JuqLxjmk0ZjRh)
-
-
-### 捐赠说明
-
-- 捐赠金额完全自愿，没有强制要求，任何金额都非常感谢您的支持。
-- 您的支持将帮助我们提供更好的服务和开发更多有用的功能。
-
-感谢您的关注与贡献！
-
 ## 联系我们
 
 如有任何问题或建议，欢迎通过 GitHub Issues 或邮件与我们联系。
@@ -59,7 +139,6 @@ WeChatPadPro 适用于个人微信增强、运营管理和自动化交互，提�
 感谢您的支持和鼓励！
 
 ![image](https://github.com/user-attachments/assets/3a552aa4-1cc0-4c3f-a170-06e9ba8ac3ac)
-![img.png](img.png)
 ![img_1.png](img_1.png)
 ![img_2.png](img_2.png)
 ![img_3.png](img_3.png)
