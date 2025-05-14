@@ -1,0 +1,52 @@
+services:
+  app:
+    build: . 
+    ports:
+      - "8059:8059"
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASS: 12345678
+      MYSQL_CONNECT_STR: root:12345678@tcp(mysql:3306)/ipad855?charset=utf8mb4&parseTime=true&loc=Local
+    networks:
+      - app-network
+    depends_on:
+      redis:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+
+  redis:
+    image: redis:latest
+    command: redis-server --requirepass 12345678
+    networks:
+      - app-network
+    volumes:
+      - ./redis/data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "12345678", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: ipad855
+    networks:
+      - app-network
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/mysql-init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p12345678"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+networks:
+  app-network:
+    driver: bridge
