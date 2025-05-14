@@ -17,6 +17,7 @@ services:
         condition: service_healthy
       mysql:
         condition: service_healthy
+    restart: unless-stopped
 
   redis:
     image: redis:latest
@@ -25,6 +26,7 @@ services:
       - app-network
     volumes:
       - ./redis/data:/data
+    restart: unless-stopped
     healthcheck:
       test: ["CMD", "redis-cli", "-a", "12345678", "ping"]
       interval: 5s
@@ -42,6 +44,7 @@ services:
     volumes:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/mysql-init:/docker-entrypoint-initdb.d
+    restart: unless-stopped
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p12345678"]
       interval: 5s
