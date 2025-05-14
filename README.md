@@ -28,10 +28,9 @@
     如果您还没有克隆本项目，请使用以下命令：
 
     ```bash
-    git clone <仓库地址>
+    git clone https://github.com/xiamuceer-j/WeChatPadPro.git
     cd WeChatPadPro-docker
     ```
-    *(请将 `<仓库地址>` 替换为实际的仓库地址)*
 
 2.  **构建和启动容器**
 
