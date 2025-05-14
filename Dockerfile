@@ -9,9 +9,7 @@ RUN echo "deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe m
 
 
 # 安装 jq (用于更安全的 JSON 处理)
-RUN apt-get update && apt-get install -y jq && rm -rf /var/lib/apt/lists/*
-
-# 设置工作目录
+RUN apt-get update && apt-get install -y jq dos2unix && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 
 # 复制 stay 可执行文件
@@ -26,13 +24,12 @@ COPY ./static ./static
 
 # 复制配置生成脚本
 COPY generate_config.sh .
-
-# 使脚本可执行
 RUN chmod +x generate_config.sh
+RUN dos2unix generate_config.sh
 
 # 设置容器启动时执行的命令
 # 脚本会先生成配置文件，然后执行 stay
 ENTRYPOINT ["./generate_config.sh"]
 
-# 暴露应用程序端口 (根据 setting.json 中的 port: "8848")
-EXPOSE 8848
+# 暴露应用程序端口 (根据 setting.json 中的 port: "8059")
+EXPOSE 8059

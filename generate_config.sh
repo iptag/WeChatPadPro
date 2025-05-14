@@ -5,6 +5,15 @@ REDIS_HOST=${REDIS_HOST:-"127.0.0.1"}
 REDIS_PORT=${REDIS_PORT:-"6379"}
 REDIS_PASS=${REDIS_PASS:-""}
 MYSQL_CONNECT_STR=${MYSQL_CONNECT_STR:-"user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=true&loc=Local"}
+PORT=${PORT:-"8059"}
+ADMIN_KEY=${ADMIN_KEY:-"stay33"}
+
+# --- Wait for MySQL to be ready ---
+echo "Waiting for MySQL to be ready..."
+
+sleep 15
+# --- End Wait for MySQL ---
+
 
 # 配置文件的路径
 CONFIG_FILE="./assets/setting.json"
@@ -27,7 +36,9 @@ then
         --arg redis_port "$REDIS_PORT" \
         --arg redis_pass "$REDIS_PASS" \
         --arg mysql_conn_str "$MYSQL_CONNECT_STR" \
-        '.redisConfig.Host = $redis_host | .redisConfig.Port = ($redis_port | tonumber) | .redisConfig.Pass = $redis_pass | .mySqlConnectStr = $mysql_conn_str' \
+        --arg app_port "$PORT" \
+        --arg admin_key "$ADMIN_KEY" \
+        '.redisConfig.Host = $redis_host | .redisConfig.Port = ($redis_port | tonumber) | .redisConfig.Pass = $redis_pass | .mySqlConnectStr = $mysql_conn_str | .port = $app_port | .adminKey = $admin_key' \
         "$TEMP_CONFIG_FILE" > "$CONFIG_FILE"
     if [ $? -ne 0 ]; then
         echo "错误：jq 修改配置文件失败！"
@@ -46,6 +57,8 @@ else
     REDIS_HOST_ESCAPED=$(echo "$REDIS_HOST" | sed 's/[\/&]/\\&/g')
     REDIS_PASS_ESCAPED=$(echo "$REDIS_PASS" | sed 's/[\/&]/\\&/g')
     MYSQL_CONNECT_STR_ESCAPED=$(echo "$MYSQL_CONNECT_STR" | sed 's/[\/&]/\\&/g')
+    PORT_ESCAPED=$(echo "$PORT" | sed 's/[\/&]/\\&/g')
+    ADMIN_KEY_ESCAPED=$(echo "$ADMIN_KEY" | sed 's/[\/&]/\\&/g')
 
     # 替换 Redis Host
     CONFIG_CONTENT=$(echo "$CONFIG_CONTENT" | sed "s/\"Host\": \".*\"/\"Host\": \"$REDIS_HOST_ESCAPED\"/")
@@ -56,6 +69,10 @@ else
     # 替换 MySQL 连接字符串
     # 使用 '#' 作为 sed 的分隔符
     CONFIG_CONTENT=$(echo "$CONFIG_CONTENT" | sed "s#\"mySqlConnectStr\": \".*\"#\"mySqlConnectStr\": \"$MYSQL_CONNECT_STR_ESCAPED\"#")
+    # 替换 Port
+    CONFIG_CONTENT=$(echo "$CONFIG_CONTENT" | sed "s/\"port\": \".*\"/\"port\": \"$PORT_ESCAPED\"/")
+    # 替换 AdminKey
+    CONFIG_CONTENT=$(echo "$CONFIG_CONTENT" | sed "s/\"adminKey\": \".*\"/\"adminKey\": \"$ADMIN_KEY_ESCAPED\"/")
 
     # 将修改后的内容写回配置文件
     echo "$CONFIG_CONTENT" > "$CONFIG_FILE"

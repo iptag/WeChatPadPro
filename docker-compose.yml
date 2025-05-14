@@ -8,6 +8,8 @@ services:
       REDIS_PORT: 6379
       REDIS_PASS: 12345678
       MYSQL_CONNECT_STR: root:12345678@tcp(mysql:3306)/ipad855?charset=utf8mb4&parseTime=true&loc=Local
+      PORT: "8059"
+      ADMIN_KEY: "stay33"
     networks:
       - app-network
     depends_on:
