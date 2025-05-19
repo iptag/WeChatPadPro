@@ -1,6 +1,9 @@
 services:
-  app:
-    build: . 
+  wechatpadpro:
+    build: .
+    image: wechatpadpro:latest
+    container_name: wechatpadpro
+    hostname: wechatpadpro
     ports:
       - "8059:8059"
     environment:
@@ -21,6 +24,8 @@ services:
 
   redis:
     image: redis:latest
+    container_name: redis
+    hostname: redis
     command: redis-server --requirepass 12345678
     networks:
       - app-network
@@ -36,6 +41,8 @@ services:
 
   mysql:
     image: mysql:latest
+    container_name: mysql
+    hostname: mysql
     environment:
       MYSQL_ROOT_PASSWORD: 12345678
       MYSQL_DATABASE: ipad855
