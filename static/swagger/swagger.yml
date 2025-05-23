@@ -2290,8 +2290,11 @@ definitions:
     type: object
 info:
   contact: ""
-  description: WeChat-iPad-8059 iOS18.3.2 最新修订版 WEB-API(支持长链接、自动心跳、自动二次登录、重启API服务自动登录)
-  title: ipad-8059 iOS18.3.2 最新修订版
+  description: |-
+    WeChatPadPro-8059 iOS18.3.2 mcp服务器版 mcp地址 http://wxmcp.knowhub.cloud/ (完美兼容mcp服务MCP模型上下文协议，提供LLM与外部系统的标准化交互接口支持长链接、自动心跳、自动二次登录、重启API服务自动登录，开源生态：兼容HuggingFace/OpenAI等主流模型平台)
+
+    服务已启动(SSE模式)，访问地址: http://localhost:8099
+  title: WeChatPadPro-8059 iOS18.3.2 最新修订mcp服务器版（SSE模式）
   version: 仅供学习交流使用，禁止用于非法用途
 paths:
   /admin/DelayAuthKey:
@@ -4041,6 +4044,19 @@ paths:
         "200":
           description: ""
       summary: 获取步数排行数据列表
+      tags:
+      - 其他
+  /other/RedisMemory:
+    get:
+      parameters:
+      - description: 账号唯一标识
+        in: query
+        name: key
+        type: string
+      responses:
+        "200":
+          description: ""
+      summary: 内存管理
       tags:
       - 其他
   /other/UpdateStepNumber:

@@ -19,7 +19,7 @@
     "MaxConnLifetime": 30,
     "ConnectTimeout": 0
   },
-  "mySqlConnectStr": "wechat_mmtls:H642EEtFkW6SWaM3@tcp(192.168.198.128:3306)/wechat_mmtls?charset=utf8mb4&parseTime=true&loc=Local",
+  "mySqlConnectStr": "weixin:4JkSD2RdJppiHdNT@tcp(192.168.198.128:3306)/weixin?charset=utf8mb4&parseTime=true&loc=Local",
   "disabledCmdList": [
     "A000"
   ],
@@ -42,4 +42,3 @@
     "ectdAddr": ""
   }
 }
-
