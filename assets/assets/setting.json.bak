@@ -20,7 +20,7 @@
     "ConnectTimeout":  0
   },
 
-  "mySqlConnectStr": "wechat_mmtls:12345678@tcp(127.0.0.1:3306)/wechat_mmtls?charset=utf8mb4&parseTime=true&loc=Local",
+  "mySqlConnectStr": "***REMOVED***/wechat_mmtls?charset=utf8mb4&parseTime=true&loc=Local",
 
   "disabledCmdList": ["A000"],
 
@@ -33,7 +33,7 @@
   "topic": "wx_sync_msg_topic",
   "rabbitMqUrl": "amqp://yunkong:123456@127.0.0.1:5672/",
   "kafka": false,
-  "kafkaUrl": "192.168.10.40:9093,192.168.10.41:9093,192.168.10.42:9093",
+  "kafkaUrl": "127.0.0.1:9093",
   "kafkaUsername": "yunkongkafka",
   "kafkaPassword": "iSPmfJmtBgcvcTJZ123456",
   "dt": true,

@@ -34,7 +34,7 @@
   "topic": "wx_sync_msg_topic",
   "rabbitMqUrl": "amqp://yunkong:123456@127.0.0.1:5672/",
   "kafka": false,
-  "kafkaUrl": "192.168.10.40:9093,192.168.10.41:9093,192.168.10.42:9093",
+  "kafkaUrl": "***REMOVED***:9093,***REMOVED***:9093,***REMOVED***:9093",
   "kafkaUsername": "yunkongkafka",
   "kafkaPassword": "iSPmfJmtBgcvcTJZ123456",
   "dt": true,

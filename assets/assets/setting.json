@@ -8,7 +8,7 @@
   "workerpoolsize": 500,
   "maxworkertasklen": 1000,
   "redisConfig": {
-    "Host": "192.168.198.128",
+    "Host": "127.0.0.1",
     "Port": 6379,
     "Db": 1,
     "User": "",
@@ -19,7 +19,7 @@
     "MaxConnLifetime": 30,
     "ConnectTimeout": 0
   },
-  "mySqlConnectStr": "wechat_mmtls:H642EEtFkW6SWaM3@tcp(154.211.22.209:3306)/wechat_mmtls?charset=utf8mb4&parseTime=true&loc=Local",
+  "mySqlConnectStr": "***REMOVED***/wechat_mmtls?charset=utf8mb4&parseTime=true&loc=Local",
   "disabledCmdList": [
     "A000"
   ],
@@ -32,7 +32,7 @@
   "topic": "wx_sync_msg_topic",
   "rabbitMqUrl": "amqp://yunkong:123456@127.0.0.1:5672/",
   "kafka": false,
-  "kafkaUrl": "192.168.10.40:9093,192.168.10.41:9093,192.168.10.42:9093",
+  "kafkaUrl": "127.0.0.1:9093",
   "kafkaUsername": "yunkongkafka",
   "kafkaPassword": "iSPmfJmtBgcvcTJZ123456",
   "dt": true,
