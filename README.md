@@ -29,7 +29,7 @@
 
     ```bash
     git clone https://github.com/xiamuceer-j/WeChatPadPro.git
-    cd WeChatPadPro-docker
+    cd WeChatPadPro
     ```
 
 2.  **构建和启动容器**
