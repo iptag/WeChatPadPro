@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   wechatpadpro:
     build: .
@@ -30,7 +32,7 @@ services:
     networks:
       - app-network
     volumes:
-      - ./redis/data:/data
+      - /root/redis/data:/data
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "redis-cli", "-a", "12345678", "ping"]
@@ -49,15 +51,15 @@ services:
     networks:
       - app-network
     volumes:
-      - ./mysql/data:/var/lib/mysql
-      - ./mysql/mysql-init:/docker-entrypoint-initdb.d
+      - /root/mysql/data:/var/lib/mysql
+      - /root/mysql/mysql-init:/docker-entrypoint-initdb.d
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p12345678"]
+      test: ["CMD", "mysqladmin", "ping", "-uroot", "-p$${MYSQL_ROOT_PASSWORD}"]  # 修复密码引用方式
       interval: 5s
       timeout: 3s
       retries: 5
-      start_period: 10s
+      start_period: 30s  # MySQL 启动较慢，延长检测等待时间
 
 networks:
   app-network:
